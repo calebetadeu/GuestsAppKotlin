@@ -28,7 +28,7 @@ class AllGuestsFragment : Fragment() {
 
         // Elemento de interface - RecyclerView
         // Não é possível deixar o Kotlin fazer o mapeamento, pois a fragment ainda não está totalmente criada
-        // Assim, precisamos buscar o elemento através de findViewById
+        // Buscar o elemento através de findViewById
         val recycler = root.findViewById<RecyclerView>(R.id.recycler_all_guests)
 
         // Atribui um layout que diz como a RecyclerView se comporta
@@ -37,7 +37,7 @@ class AllGuestsFragment : Fragment() {
         // Defini um adapater - Faz a ligação da RecyclerView com a listagem de itens
         recycler.adapter = mAdapter
 
-        // Cria os observadores
+        // Create the observ
         observe()
 
         mListener = object : GuestListener {
@@ -57,7 +57,7 @@ class AllGuestsFragment : Fragment() {
             }
         }
 
-        // Retorna a Fragment criada
+        // Retorn the  Fragment created
         return root
     }
 
@@ -68,7 +68,7 @@ class AllGuestsFragment : Fragment() {
     }
 
     /**
-     * Cria os observadores
+     * Create observ
      */
     private fun observe() {
         mViewModel.guestList.observe(viewLifecycleOwner, Observer {
