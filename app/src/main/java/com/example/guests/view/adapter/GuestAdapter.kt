@@ -10,6 +10,10 @@ import com.example.guests.view.viewholder.GuestViewHolder
 
 class GuestAdapter : RecyclerView.Adapter<GuestViewHolder>() {
 
+ /**
+  * Anotações Para Estudo
+  * */
+
     // Lista de convidados
     private var mGuestList: List<GuestModel> = arrayListOf()
     private lateinit var mListener: GuestListener
@@ -23,16 +27,15 @@ class GuestAdapter : RecyclerView.Adapter<GuestViewHolder>() {
         return GuestViewHolder(item, mListener)
     }
 
-    /**
-     * Qual o tamanho da RecyclerView
+    /***Tamanho da RecyclerView
      */
     override fun getItemCount(): Int {
         return mGuestList.count()
     }
 
     /**
-     * Para cada linha, este método é chamado
-     * É responsável por atribuir os valores de cada item para uma linha específica
+
+     Atribuir os valores de cada item para uma linha específica
      */
     override fun onBindViewHolder(holder: GuestViewHolder, position: Int) {
         holder.bind(mGuestList[position])
