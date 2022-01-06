@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.nav_presents,
                     R.id.nav_absents
                 )
-                .setDrawerLayout(drawerLayout)
+                .setOpenableLayout(drawerLayout)
                 .build()
         setupActionBarWithNavController(navController, mAppBarConfiguration)
         navView.setupWithNavController(navController)
